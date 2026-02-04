@@ -15,4 +15,11 @@ app.use(express.static("public"))//to serve static files
 app.use(cookieParser())//this will allow us CRUD operations on user cookies
 
 
+//Routes importing
+import userRouter from './routes/user.routes.js';
+
+
+//routes declaration
+app.use("/api/v1/users", userRouter)
+
 export default app;
